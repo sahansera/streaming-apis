@@ -18,6 +18,7 @@ nextjs-streaming-api
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── README.md
+├── Makefile
 └── README.md
 ```
 
@@ -27,16 +28,42 @@ nextjs-streaming-api
 
 - Node.js (for the frontend)
 - Python 3.7 or higher (for the backend)
+- `make` (to use the Makefile)
 
 ### Quick Setup
 
 To quickly install dependencies and start both the frontend and backend servers, run the following command from the project root:
 
 ```sh
-bash setup.sh
+make all
 ```
 
+### Using the Makefile
+
+The `Makefile` provides convenient commands for common tasks:
+
+- **Setup**: Install dependencies for both frontend and backend:
+  ```sh
+  make setup
+  ```
+
+- **Start**: Start both the frontend and backend servers:
+  ```sh
+  make start
+  ```
+
+- **Clean**: Remove `node_modules` from the frontend and clear Python cache from the backend:
+  ```sh
+  make clean
+  ```
+
+## Usage
+
+Once both servers are running, you can access the frontend at `http://localhost:3000` and the FastAPI backend at `http://localhost:8000`.
+
 ### Frontend Setup
+
+If you prefer manual setup, follow these steps:
 
 1. Navigate to the frontend directory:
    ```sh
@@ -48,31 +75,27 @@ bash setup.sh
    npm install
    ```
 
-3. Start the Next.js development server:sh
+3. Start the Next.js development server:
    ```sh
    npm run dev
    ```
 
-### Backend Setupsh
+### Backend Setup
 
 1. Navigate to the backend directory:
-   ```
-   cd backend
    ```sh
+   cd backend
+   ```
 
 2. Install the Python dependencies:
-   ```
+   ```sh
    pip install -r requirements.txt
    ```
 
 3. Start the FastAPI server:
-   ```
+   ```sh
    uvicorn api.index:app --reload
    ```
-
-## Usage
-
-Once both servers are running, you can access the frontend at `http://localhost:3000` and the FastAPI backend at `http://localhost:8000`.
 
 ## Contributing
 
