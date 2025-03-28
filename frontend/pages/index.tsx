@@ -27,7 +27,7 @@ function ReceivedData({ dataChunks }: { dataChunks: { timestamp: string; log: st
   );
 }
 
-export default function StreamPage() {
+export default function IndexPage() {
   const [dataChunks, setDataChunks] = useState<{ timestamp: string; log: string }[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

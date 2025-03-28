@@ -65,37 +65,15 @@ Once both servers are running, you can access the frontend at `http://localhost:
 
 If you prefer manual setup, follow these steps:
 
-1. Navigate to the frontend directory:
-   ```sh
-   cd frontend
-   ```
-
-2. Install the dependencies:
-   ```sh
-   npm install
-   ```
-
-3. Start the Next.js development server:
-   ```sh
-   npm run dev
-   ```
+```sh
+make setup && make start-frontend
+```
 
 ### Backend Setup
 
-1. Navigate to the backend directory:
-   ```sh
-   cd backend
-   ```
-
-2. Install the Python dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-3. Start the FastAPI server:
-   ```sh
-   uvicorn api.index:app --reload
-   ```
+```sh
+make setup && make start-backend
+```
 
 ## Contributing
 
