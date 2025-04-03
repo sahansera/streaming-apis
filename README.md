@@ -1,4 +1,4 @@
-# Next.js Streaming API with FastAPI
+# Streaming APIs with NextJS with FastAPI
 
 This project is a full-stack application that combines a Next.js frontend with a FastAPI backend. Below are the instructions for setting up and running both parts of the application.
 
